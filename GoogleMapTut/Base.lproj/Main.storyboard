@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleMapTut" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ea0-TW-rCk" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_me" translatesAutoresizingMaskIntoConstraints="NO" id="8Hy-Ke-hRR">
+                                <rect key="frame" x="192" y="393" width="30" height="55"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv2-fP-cpE">
+                                <rect key="frame" x="0.0" y="838" width="414" height="24"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ea0-TW-rCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6fP-9S-b5z"/>
+                            <constraint firstItem="8Hy-Ke-hRR" firstAttribute="centerX" secondItem="ea0-TW-rCk" secondAttribute="centerX" id="75U-6y-3MV"/>
+                            <constraint firstAttribute="centerY" secondItem="ea0-TW-rCk" secondAttribute="bottom" constant="-5" id="Qf2-ew-E4a"/>
+                            <constraint firstItem="ea0-TW-rCk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rbv-4L-GMU"/>
+                            <constraint firstAttribute="centerY" secondItem="8Hy-Ke-hRR" secondAttribute="bottom" id="YMD-Io-8Gd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ea0-TW-rCk" secondAttribute="trailing" id="c3t-qQ-CQw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ea0-TW-rCk" secondAttribute="bottom" id="ewf-hJ-XST"/>
+                            <constraint firstItem="tv2-fP-cpE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lfO-63-Qao"/>
+                            <constraint firstItem="tv2-fP-cpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r8e-Cu-6he"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tv2-fP-cpE" secondAttribute="bottom" id="vNS-uP-Pa5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="tv2-fP-cpE" id="zn3-zM-pvG"/>
+                        <outlet property="mapView" destination="ea0-TW-rCk" id="1Xf-bW-PJP"/>
+                        <outlet property="pinCenter" destination="Qf2-ew-E4a" id="F55-Vb-UmM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_me" width="30" height="55"/>
+    </resources>
+</document>
